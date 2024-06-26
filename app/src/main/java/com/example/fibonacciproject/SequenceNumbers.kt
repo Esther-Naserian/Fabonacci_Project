@@ -7,8 +7,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Recycler
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import java.math.BigInteger
 
-class SequenceNumbers (var nums:List<Int>):RecyclerView.Adapter<AllFibonacciHolder>(){
+class SequenceNumbers (var nums:List<BigInteger>):RecyclerView.Adapter<AllFibonacciHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AllFibonacciHolder {
         val itemView = LayoutInflater.from (parent.context).inflate(R.layout.sequence,parent,false)
         return AllFibonacciHolder(itemView)

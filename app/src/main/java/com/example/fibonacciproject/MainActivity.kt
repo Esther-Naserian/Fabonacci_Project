@@ -8,6 +8,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.fibonacciproject.databinding.ActivityMainBinding
+import java.math.BigInteger
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -23,8 +24,8 @@ class MainActivity : AppCompatActivity() {
 
 
     }
-    fun addNumbers(num:Int):List<Int>{
-        val number = mutableListOf(0,1)
+    fun addNumbers(num:Int):List<BigInteger>{
+        val number = mutableListOf(BigInteger.ZERO,BigInteger.ONE)
         while (number.size < num){
             number.add(number[number.lastIndex]+number[number.lastIndex -1])
         }
